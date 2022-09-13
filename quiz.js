@@ -56,8 +56,41 @@ document.addEventListener("DOMContentLoaded", () => {
     tmrw.setSeconds(0);
 
     leaderboard.innerHTML = "<h1>Leaderboard</h1>";
-    elo.innerHTML = "<h1>Your Elo</h1>";
+    elo.innerHTML = "<h1>Your Elo</h1><h2>1200LP</h2><img src='Emblem_Diamond2.png' alt='hello'/>";
+    drawTable();
 
+    function drawTable() {
+        tbl = document.createElement('table');
+        tbl.style.width = '100%';
+        tbl.style.border = '2px solid black';
+        let titles = [
+            ["Rank","User","Elo","Leagdle Points"],
+            [1,"Lukox","Challenger","1500"],
+            [2,"Szymon","Challenger","1500"],
+            [3,"Luko","Challenger","1500"],
+            [4,"Luko","Challenger","1500"],
+            [5,"Luko","Challenger","1500"],
+            [6,"Luko","Challenger","1500"],
+            [7,"Luko","Challenger","1500"],
+            [8,"Luko","Challenger","1500"],
+            [9,"Luko","Challenger","1500"],
+            [10,"Luko","Challenger","1500"],
+        ];
+      
+        for (let i = 0; i < 11; i++) {
+            const tr = tbl.insertRow(); 
+            for (let j = 0; j < 4; j++) {
+                const td = tr.insertCell();
+                if(j==2 && i > 0){
+                    td.innerHTML="<img src='Emblem_Challenger.png' alt='hello'/>";
+                }else{
+                    td.appendChild(document.createTextNode(titles[i][j]));  
+                }       
+                td.style.border = '2px solid black'; 
+            }
+        }
+        leaderboard.appendChild(tbl);
+      }
 
     function getQuestion(){
         choices.style.display = "block";

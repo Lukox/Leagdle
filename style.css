@@ -43,18 +43,22 @@
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
 
+  #info{
+    
+  }
+
 
   #leaderboard{
     position: absolute;
     top: 120px;
-    right: 50px;
-    background-color: darkblue;
-    border : 4px solid yellow;
+    left: 1060px;
     border-radius: 1px;
-    width:400px;
-    height : 500px;
-    color: white;
-    opacity: 0.5;
+    width:390px;
+    height : 450px;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    opacity: 1;
     padding: 5px;
   }
 
@@ -66,12 +70,19 @@
     text-align: center;
   }
 
-  #elo h1{
-    margin : 0px;
-    padding : 15px;
-    font-size: 1.75em;
-    font-weight: bold;
+  #leaderboard table{
     text-align: center;
+  }
+
+  #leaderboard tbody {
+    display: block;
+    max-height: 350px;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  #leaderboard th, td {
+    width: 100px;
   }
 
   
@@ -99,15 +110,33 @@
   top: 120px;
   left: 50px;
   position: absolute;
-  background-color: darkblue;
-  border : 4px solid yellow;
   border-radius: 1px;
   width:400px;
-  height : 200px;
-  color: white;
-  opacity: 0.5;
+  height : 275px;
+  color: black;
+  opacity: 1;
   padding: 5px;
 } 
+
+#elo h1{
+  margin : 0px;
+  padding : 10px;
+  font-size: 1.75em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#elo h2{
+  position:absolute;
+  top: 130px;
+  left: 245px;
+}
+
+#elo img{
+  position:absolute;
+  top:  40px;
+  left: 9px;
+}
 
 #qImg{
   width : 100px;
@@ -151,11 +180,11 @@
 
 #answers{
     position: absolute;
-    top: 250px;
+    top: 260px;
     left: 512px;;
     width : 600px;
     height: 400px;
-    padding : 10px
+    padding : 5px
 }
 .answer{
     display: block;
